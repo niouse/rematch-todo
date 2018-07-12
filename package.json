@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@blueprintjs/core": "^2.3.1",
     "@rematch/core": "^1.0.0-beta.2",
-    "grid-styled": "^4.1.1",
     "install": "^0.11.0",
     "npm": "^6.1.0",
     "react": "^16.4.1",
@@ -14,7 +12,6 @@
     "react-scripts": "1.1.4",
     "react-transition-group": "^2.3.1",
     "redux-form": "^7.4.2",
-    "styled-components": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

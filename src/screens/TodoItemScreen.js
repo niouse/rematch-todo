@@ -1,8 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Button, Switch } from "@blueprintjs/core";
-import { Flex, Box } from 'grid-styled';
+const containerStyle = {
+  display : "flex",
+  alignItems : "center",
+  justifyContent : "center",
+  margin : "2px"
+}
+
+const textInputStyle = {
+  width : "240px"
+}
 
 const TodoItem = ({
   title,
@@ -10,14 +18,14 @@ const TodoItem = ({
   deleteTodo,
   toggleStatus,
   todoIndex }) => (
-  <Flex
-    m={2}
-    alignItems="center"
-    justifyContent="center">
-    <Switch inline checked={status} onChange={() => toggleStatus(todoIndex)} />
-    <Box width={240}>  {title} </Box>
-    <Button icon="delete" onClick={() => deleteTodo(todoIndex)} />
-  </Flex>
+  <div style={containerStyle}>
+    <input 
+      type="checkbox" 
+      checked={status} 
+      onChange={() => toggleStatus(todoIndex)} />
+    <span style={textInputStyle}> {title} </span>
+    <button  onClick={() => deleteTodo(todoIndex)}> delete </button>
+  </div>
 )
 
 export default TodoItem
