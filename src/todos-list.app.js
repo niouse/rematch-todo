@@ -14,7 +14,7 @@ const store = init({
 const mapState = state => {
   return {
     todos: state.appModel.todos,
-    newTodo : ""
+    newTodo : state.appModel.newTodo
   }
 };
 
