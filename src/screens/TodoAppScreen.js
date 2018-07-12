@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { Button, InputGroup, Label, Spinner } from "@blueprintjs/core";
 import { Flex } from 'grid-styled';
-import TodoItem from './todo-item.screen';
+import TodoItem from './TodoItemScreen';
 
 class TodoScreen extends Component {
 
@@ -27,7 +27,7 @@ class TodoScreen extends Component {
       <Flex flexDirection="column" alignItems="center">
         <h1>Todo app rematch and redux form yaeh</h1>
         <Flex>
-          <Label text="Ajouter une todo à la liste" inline={true}>
+          <Label text="Ajouter une todo à la liste" inline>
             <InputGroup value={newTodo} onChange={handleChange} />
           </Label>
           <Button icon="add" onClick={addTodo} />
