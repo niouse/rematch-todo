@@ -4,9 +4,6 @@ import TodoScreen from './screens/TodoAppScreen'
 import { init } from '@rematch/core';
 import * as models from './models/todo-app';
 
-import '@blueprintjs/core/lib/css/blueprint.css';
-import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-
 const store = init({
   models,
 });
@@ -24,7 +21,7 @@ const mapDispatch = dispatch => {
     deleteTodo : dispatch.appModel.deleteTodo,
     toggleStatus : dispatch.appModel.toggleStatus,
     handleChange : dispatch.appModel.handleChange,
-    populate : dispatch.appModel.populate,
+    fetchTodos : dispatch.appModel.fetchTodos,
   }
 }
 

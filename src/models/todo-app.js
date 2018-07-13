@@ -11,9 +11,7 @@ export const appModel = {
       newTodos.push({title:state.newTodo, status:false})
       return { ...state, todos: newTodos }
     },
-
     initTodos : (state, todos) => ({...state, todos:todos}),
-
     deleteTodo: (state, payload) => {
       const newTodos = state.todos.slice()
       newTodos.splice(payload, 1)
@@ -25,11 +23,11 @@ export const appModel = {
       return { ...state, todos: newTodos }
     },
     handleChange: (state, payload) => {
-      return { ...state, newTodo: payload.currentTarget.value }
+      return { ...state, newTodo: payload }
     },
   },
   effects: (dispatch) => ({
-    async populate(payload, rootState) {
+    async fetchTodos(payload, rootState) {
       await new Promise(resolve => setTimeout(resolve, 600))
       dispatch.appModel.initTodos(todos)
     }
